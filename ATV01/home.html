@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p{background-color: rgb(255, 255, 255);}
+        
+        table, th, td {
+          border: 0.5px dotted black;
+          background-color: rgb(255, 255, 255);
+        }
+        #imagem img{
+            width: 3%;
+        }
+
+        footer{
+	        margin-left: 500px;
+        }
+        body{
+	        background-color: rgb(214, 235, 228);
+        }
+        form{
+            background-color: rgb(255, 255, 255);
+            margin-right: 500px;
+        }
+
+    </style>
+    <title>Estruturas de Dados</title>
+</head>
+<body>
+    <header><i><h1>Estruturas de Dados</h1></i></header>
+    <hr>
+    <nav>
+    <div>
+        <a href="home.html"><div id="tab"> HOME </div></a>
+
+        <div id = "imagem">
+            <ul>
+            <li><a href="http://calhau.dca.fee.unicamp.br/wiki/images/0/01/EstruturasDados.pdf"> Texto relacionado 01 </a></li><br>
+            <li><a href="https://sites.google.com/site/proffdesiqueiraed/aulas/aula-1---introducao-a-estrutura-de-dados"> Texto relacionado 02 </a></li><br>
+            <li><a href="http://sites.poli.usp.br/p/fabio.cozman/Didatico/Comp/Material/estruturas.pdf"><img src="IMGS/ED.png"  alt="ALT"></a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    <article>
+        <section>
+        <header><h2><b>1 - Introdução</b></h2></header>
+        <p>Antes de mais nada, é importante falarmos um pouco sobre o que é a disciplina em questão. Trata-se de Estruturas 
+            de Dados, disciplina essa voltada ao ramo da computação, que por sua vez, segundo [Celes et al. 2004], estuda a 
+            forma mais eficaz e organizada de abstrair um conjunto de dados, que soltos não justificam sua existência e 
+            armazená-los em uma base arranjada para que possa gerar informação, isto é, depois de implementada conforme os 
+            fundamentos de programação.</p>
+        
+        <p>O aprendizado de disciplinas associadas à computação exige um alto nível de abstração, como citado por 
+            [Costa et al. 2012]: A assimilação dos conceitos da grande área da Computação é um processo desafiador, 
+            sendo para muitos estudantes uma tarefa difícil compreender a abstração deste braço da Ciência. Disciplinas 
+            iniciais nessa modalidade de curso, como programação, revelam um elevado índice de abandono, que de acordo com 
+            [de Castro et al. 2003], é devido a pouca habilidade que os estudantes possuem em construir algoritmos e 
+            estruturas de dados.</p>
+            
+        <p>Esse artigo foi desenvolvido para apresentar um embasamento prático das aulas remotas. Acredita-se que há 
+            consideravelmente uma diferença no que se refere ao ensino presencial. O fator desempenho, geralmente é 
+            muito afetado, pois estilo presencial, temos mais o apoio no quesito de comunicação entre discente e docente. 
+            Nas aulas remotas já se torna um pouco limitado, porque além de diminuir essa comunicação, pode ser que venha 
+            a surgir outros contratempos que dificultam os afazeres ligados a disciplina [dos Santos et al. 2020]. Neste contexto,
+            serão também abordados alguns destes empecilhos no decorrer deste documento.</p>
+
+        <p>O restante deste trabalhao está organizado da seguinte forma: na Seção 2, apresentam-se os trabalhos 
+            relacionados; na Seção 3, os procedimentos metodológicos; na Seção 4, os resultados; e por  fim, na Seção 5: 
+            as conclusões</p>
+        </section>    
+    </article>
+    
+    
+    <article>
+        <section>
+        <header><h2><b>2 - Procedimentos e Métodos</b></h2></header>
+        <p>Inicialmente, após o surgimento da pandemia, foi indicado que as 
+            universidades também fossem fechadas, assim como outras organizações. Desse modo, passamos a ter posteriormente 
+            aulas remotas, retomando assim, nossas atividades acadêmicas. Então, foi durante este período que o novo 
+            professor assumiu a turma de Estruturas de Dados, que tinha sido deixada por outro professor, ainda no ensino 
+            presencial.</p>
+         
+        <p>[Cowan 2002], coloca que a competência dos alunos é aumentada, 
+            particularmente, por métodos ativos de aprendizado que desenvolvam interesses, habilidades e experiências prévias 
+            dos aprendizes. Além disso, a capacidade de lidar com dificuldades é desenvolvida, encorajando os alunos a 
+            encontrarem soluções para problemas que identificaram pessoalmente. Fica clara a importância da existência de
+            atividades práticas, que permitam que os alunos, alicerçados na teoria, possam colocar a “mão na massa”.</p>
+            
+        <p>Posteriormente, já disposto a enfrentar esse desafio, foi imposto o 
+            início das aulas. A proposta empregada pelo professor foi a utilização de vídeoaulas (postadas no Moodle, 
+            sistema usado como canal de ensino e comunicação), atividades práticas e avaliações parciais. Em relação às 
+            vídeoaulas, era algo que  preocupava um pouco por um lado e confortava por outro. Chegava a preocupar o discente, 
+            pois tinha como algo muito mecânico e pelo grau de dificuldade que apresentava, pensava que aulas gravadas não fosse 
+            o suficiente para gerar um bom aprendizado. Precisava de mais, aulas ao vivo era o que fazia o discente crer com que 
+            seu desempenho fosse de fato dado como bom. Logo após, o discente se dispôs a assistir a primeira vídeoaula, e por 
+            íncrivel que pareça, gostou bastante! E assim foi indo, aula por aula, atividade por atividade, as coisas começaram 
+            a se encaixar.</p>
+    
+        <p>O lado que confortava também era o fato das aulas serem gravadas e 
+            consequentemente poderia ser assistida no tempo que o discente quisesse, é claro que, respeitando os prazos 
+            de entregas das atividades. Sobre as atividades, para cada vídeoaula, tinha uma atividade ou resumo sobre o 
+            conteúdo ministrado na aula. Neste cenário, o papel que as atividades exerciam era de muita relevância. Por 
+            dois fatores que as atividades eram tão importantes, primeiro que ajudava na absorção do conteúdo e segundo que, 
+            valia 1 ponto na avaliação parcial. De forma mais clara, a prova valia 9.0 e as resoluções de exercícios valiam 
+            1.0 ponto, totalizando assim, o 10.0 mais tradicional da educação de ensino brasileiro.</p>   
+    
+        <p>Desde modo, para avaliarmos o trajeto do discente no decorrer da disciplina, foram tais métricas: a quantidade 
+            de atividades propostas pelo docente X quantidade de atividades realizadas pelo discente, o nível de dificuldade 
+            das atividades, os meios utilizados pelo discente para resolver as atividades, a quantidade de horas que o 
+            discente levou para resolver cada atividade e uma média aritmética de quantos dias foram gastos para resolver 
+            as atividades, de modo geral.</p>
+        </section>
+        </article>
+
+        <article>    
+            <section>
+            <header><h2><b>3 - Resultados</b></h2></header>
+            <p>No decorrer desta seção serão apreciadas a clareza dos resultados obtidos, 
+                evidencia-se uma série de informações aderentes ao relato de experiência proposto neste trabalho. Refere-se as 
+                tarefas que foram realizadas no semestre letivo 2020.1 na modalidade de ensino remoto, dentro do que foi proposto 
+                pelo docente da disciplina. </p>
+                
+                <h3><b>3.1 Atividades propostas - Unidade 1</b></h3>
+                <P>Aqui veremos uma representação de desempenho, baseado em tudo o que foi ministrado de conteúdos até a primeira 
+                    prova (dado como, unidade 1). </P>
+                
+                <h4>Meios utilizados para realizar as Atividades</h4>
+                <table>
+                    <tr>
+                      <th>Atividades (atv)</th>
+                      <th>Meios</th>
+                      <th>Grau de dificuldade</th>
+                    </tr>
+        
+                    <tr>
+                      <td>atv 01</td>
+                      <td>Videoaula</td>
+                      <td>Médio</td>
+                    </tr>
+        
+                    <tr>
+                        <td>atv 02</td>
+                        <td>Videoaula</td>
+                        <td>Médio</td>
+                    </tr>
+        
+                    <tr>
+                        <td>atv 03</td>
+                        <td>Auxilio do Monitor</td>
+                        <td>Dificil</td>
+                    </tr>
+        
+                    <tr>
+                        <td>atv 04</td>
+                        <td>YouTube</td>
+                        <td>Dificil</td>
+                    </tr>    
+                  </table>
+        
+                  <h3><b>3.2 Atividades propostas - Unidade 2</b></h3>
+                  <P>Esta seção é bastante similiar a seção 3.1, onde também irá mostrar uma representação de 
+                      desempenho baseado nos conteúdos, porém, a diferença é que desta vez, é com base em tudo o que foi 
+                      ministrado depois da primeira prova, até o término da disciplina. </P>     
+                      
+                      <h4>Meios utilizados para realizar as Atividades</h4>
+                      <table>
+                        <tr>
+                          <th>Atividades (atv)</th>
+                          <th>Meios</th>
+                          <th>Grau de dificuldade</th>
+                        </tr>
+            
+                        <tr>
+                          <td>atv 05</td>
+                          <td>Videoaula</td>
+                          <td>Fácil</td>
+                        </tr>
+            
+                        <tr>
+                            <td>atv 06</td>
+                            <td>YouTube</td>
+                            <td>Médio</td>
+                        </tr>
+            
+                        <tr>
+                            <td>atv 07</td>
+                            <td>Videoaula</td>
+                            <td>Fácil</td>
+                        </tr>
+            
+                        <tr>
+                            <td>atv 08</td>
+                            <td>YouTube</td>
+                            <td>Médio</td>
+                        </tr>    
+                      </table>
+        <br>
+        </section>
+        </article>
+
+            <hr>
+            <footer>
+                    <form action="">
+                        <h3>Preencha o formulário de pesquisa:</h3>
+                      Nome: <input type="text" maxlength="15"><hr>
+                    
+                      Valor: <input type="number" min="2500" max="3000" maxlength="4"><hr>
+                    
+
+                        <small> Você leu a primeira seção? </small> <input type="checkbox" name="check" id="1"><br>
+                        <small> Você leu a segunda seção? </small>  <input type="checkbox" name="check" id="2"><br>
+                        <small> Você leu a terceira seção? </small>  <input type="checkbox" name="check" id="3"><hr>
+                    
+
+                        <i> Você gostou da leitura? </i><br>
+                            SIM  <input type="radio" name="gender" id="1"><br>
+                            NÃO <input type="radio" name="gender" id="2"><br><hr>
+
+                        <i> Você indicaria a leitura para seus amigos? </i><br>
+                            SIM <input type="radio" name="gender1" id="3"><br>
+                            NÃO <input type="radio" name="gender1" id="4"><br><hr>
+
+                        <input type="text" value = "Obrigado pela atenção." disabled>
+                        <hr>
+                    </form>
+            </footer>
+            <br><br><br>
+
+</body>
+</html>
