@@ -7,5 +7,31 @@
     width: 200px;
     height: 200px;
     background-color: blue;
-    transform: translate(40px, 40px) rotate(10deg);
+    /*transform: translate(40px, 40px) rotate(10deg);*/
+    transition: width, 3s;
+    box-shadow: 10px 6px;
+    border-radius: 100px;
+    margin: 20px;
+}
+
+.minha-div:hover{
+    width: 50%;
+}
+
+.botao-3D{
+    background-color: chartreuse;
+    border: none;
+    outline: none;
+    padding: 20px;
+    margin-left: 56px;
+    cursor: pointer;
+    border-radius: 20px;
+
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 500ms, box-shadow 500ms; /*sombra e o botao se mexer mais suave*/
+}
+
+.botao-3D:active{
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+    transform: translate(3px, 3px);
 }
