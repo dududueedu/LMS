@@ -1,62 +1,49 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
-.minha-div{
-    width: 200px;
-    height: 200px;
-    background-color: blue;
-    /*transform: translate(40px, 40px) rotate(10deg);*/
-    transition: width, 3s;
-    box-shadow: 10px 6px;
-    border-radius: 100px;
-    margin: 20px;
+.navegador-sup{
+    background-color: slategray;
+    height: 40px;
+    display: flex;
 }
 
-.minha-div:hover{
-    width: 50%;
+.navegador-sup .menu{
+    font-style: normal;
+    color: snow;
+    text-decoration: none;
+    margin: 10px;
 }
 
-.botao-3D{
-    background-color: chartreuse;
-    border: none;
-    outline: none;
-    padding: 20px;
-    margin-left: 56px;
-    cursor: pointer;
-    border-radius: 20px;
-
-    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
-    transition: transform 500ms, box-shadow 500ms; /*sombra e o botao se mexer mais suave*/
+.container{
+    display: flex;
 }
 
-.botao-3D:active{
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
-    transform: translate(3px, 3px);
+.container .menu-lateral{
+    background-color: springgreen;
+    width: 350px;
+    height: 800px;
+}
+.container .menu-lateral .menu-L{
+    text-decoration: none;
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
 }
 
-.loading{
-    width: 100px;
-    height: 100px;
-    margin: 40px;
-    border-radius: 100px;
-    border-width: 25px;
-    border-style: solid;
-    border-color: yellow black black;
-    
-    animation-name: giragira;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    animation-timing-function: linear;
+.container .conteudo .celula1{
+    position: absolute;
+    display: flex;
+    height: 400px;
+    width: 100%;
+    background-color: tomato;
 }
 
-@keyframes giragira{
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
+.container .conteudo .celula2{
+    position: relative;
+    display: flex;
+    height: 400px;
+    width: 100%;
+    background-color: darkblue;
 }

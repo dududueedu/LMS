@@ -38,3 +38,8 @@ Animação:
             em 100%: faça isso;
     
     animation-interation-count: 3; //repete 3x
+
+Media Queries
+    permite mudar o estilo de acordo com as caracteristicas do aparelho
+    que está renderizando o site;
+    
