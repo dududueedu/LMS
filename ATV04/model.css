@@ -64,12 +64,12 @@ body{
 }
 
 #celula01 {
-    background-color: rgb(255, 251, 6);
+    background-color:  tomato;
     flex-basis: calc((100vw - 350px)/2);
     text-align: center;
 }    
 #celula02 {
-    background-color: tomato;
+    background-color:rgb(255, 251, 6);
     flex-basis: calc((100vw - 350px)/2);
     text-align: center;
 } 
@@ -139,6 +139,27 @@ body{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-direction: reverse;
+}
+.container .conteudo .linha1 .celula#celula02 .overlay{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.container .conteudo .linha1 .celula#celula02 .overlay .overlay-inner{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 400px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .conteudo .linha1 .celula#celula02 .overlay img{
+    height: 400px;
+}
+.container .conteudo .linha1 .celula#celula02 .overlay .overlay-inner .overlay-text{
+    color: white;
 }
 
 @keyframes animatiON{
