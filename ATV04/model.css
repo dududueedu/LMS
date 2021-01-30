@@ -1,6 +1,10 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
 }
 
 .navegador-sup{
@@ -14,6 +18,8 @@
     color: snow;
     text-decoration: none;
     margin: 10px;
+    box-shadow: 5px 3px rgb(0, 0, 0, .5);
+    box-shadow: 5px 3px 5px 3px rgb(0, 0, 0, .5);
 }
 
 .container{
@@ -22,28 +28,124 @@
 
 .container .menu-lateral{
     background-color: springgreen;
+    flex-shrink: 0;
     width: 350px;
     height: 800px;
 }
+
+.container .conteudo{ 
+    flex-grow: 1;
+}
+
 .container .menu-lateral .menu-L{
     text-decoration: none;
     display: flex;
     padding-top: 50px;
     justify-content: center;
+    box-shadow: 5px 3px 5px 3px rgb(0, 0, 0, .5);
 }
 
-.container .conteudo .celula1{
-    position: absolute;
+.container .conteudo .linha1{
     display: flex;
     height: 400px;
     width: 100%;
+}
+
+.container .conteudo .linha2{
+    display: flex;
+    height: 400px;
+    width: 100%;
+}
+
+.container .conteudo .linha1 .celula {
+    flex-shrink: 0;
+
+    flex-basis: 100%;
+}
+
+#celula01 {
+    background-color: rgb(255, 251, 6);
+    flex-basis: calc((100vw - 350px)/2);
+    text-align: center;
+}    
+#celula02 {
     background-color: tomato;
+    flex-basis: calc((100vw - 350px)/2);
+    text-align: center;
+} 
+#celula03 {
+    background-color: darkblue;
+    flex-basis: calc((100vw - 350px)/3);
+    text-align: center;
+} 
+#celula04 {
+    background-color: rgb(0, 0, 0);
+    flex-basis: calc((100vw - 350px)/3);
+    text-align: center;
+    color: blanchedalmond;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+#celula05 {
+    background-color: rgb(0, 204, 255);
+    flex-basis: calc((100vw - 350px)/3);
+    text-align: center;
+} 
+
+@media screen and (max-width: 768px) {
+
+    /* Estilo para modificar o container*/
+    .container {
+        flex-direction: column; 
+    }
+    .container .conteudo .linha1 {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        
+    }
+
+    .container .conteudo .linha2 {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        
+    }
+    #celula01, #celula02, #celula03, #celula04, #celula05 {
+        width: 100%;
+        height: 400px;
+        flex-basis: initial;
+    } 
+
+    .container .menu-lateral{
+        height: 400px;
+        width: auto;
+    }
+
+    .container .menu-lateral .menu-L{
+        box-shadow: none;
+    }
+    .navegador-sup .menu{
+        box-shadow: none;
+    }
 }
 
-.container .conteudo .celula2{
-    position: relative;
-    display: flex;
-    height: 400px;
-    width: 100%;
-    background-color: darkblue;
+.cubomagico img{
+    height: 121px;
+    width: 121px;
+    animation-name: animatiON;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+
+@keyframes animatiON{
+    from{
+        transform: rotate(0deg) translateX(50px);
+    }
+    to{
+        transform: rotate(360deg) translateX(50px);
+    }
 }
