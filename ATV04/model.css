@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
 }
 body{
     position: relative;
@@ -11,6 +11,8 @@ body{
     background-color: slategray;
     height: 40px;
     display: flex;
+    box-shadow: 5px 3px 5px 3px rgb(0, 0, 0, .9);
+    z-index: 100;
 }
 
 .navegador-sup .menu{
@@ -24,6 +26,7 @@ body{
 
 .container{
     display: flex;
+    z-index: -100;
 }
 /*MENU LATERAL ESQUERDO*/
 .container .menu-lateral{
@@ -31,6 +34,9 @@ body{
     flex-shrink: 0;
     width: 350px;
     height: 800px;
+
+    z-index: 10;
+    box-shadow: 5px 5px 5px rgba(255, 0, 0, 0.9);
 }
 
 .container .conteudo{ 
@@ -42,7 +48,6 @@ body{
     display: flex;
     padding-top: 50px;
     justify-content: center;
-    box-shadow: 5px 3px 5px 3px rgb(0, 0, 0, .5);
     color: black;
 }
 /*CONTEUDO, LINHAS E CELULAS*/
@@ -101,6 +106,7 @@ body{
     .container {
         flex-direction: column; 
     }
+
     .container .conteudo .linha1 {
         flex-direction: column;
         width: 100%;
@@ -124,6 +130,9 @@ body{
     }
 
     .container .menu-lateral .menu-L{
+        box-shadow: none;
+    }
+    .container .menu-lateral {
         box-shadow: none;
     }
     .navegador-sup .menu{
@@ -165,12 +174,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px ridge rgb(0, 0, 0);
 }
 .container .conteudo .linha1 .celula#celula01 .accordion .body{
     height: 0px;
     overflow: hidden;
-    transition: height .9s ease-in-out;
+    transition: height .7s ease-in-out;
 }
 .container .conteudo .linha1 .celula#celula01 .accordion .body p{
     padding: 15px;
