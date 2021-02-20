@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navegador_superior{
+    height: 40px;
+    width: 100%;
+    background-color: rgba(153, 205, 50, 0.753);
+    display: flex;
+}
+
+.navegador_superior .minha_logo{
+    height: 40px;
+    width: 50px;
+}
+
+.navegador_superior .meu-botao{
+    margin-left: auto;
+    padding: 10px 20px;
+    border: 1px solid rgb(160, 137, 137);
+    outline: none;
+    cursor: pointer;
+}
