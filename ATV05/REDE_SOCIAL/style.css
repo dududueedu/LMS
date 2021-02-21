@@ -8,16 +8,44 @@
     background-color: rgba(153, 205, 50, 0.753);
     display: flex;
 }
-
 .navegador_superior .minha_logo{
     height: 40px;
     width: 50px;
 }
-
-.navegador_superior .meu-botao{
+.navegador_superior .meu_botao{
     margin-left: auto;
     padding: 10px 20px;
-    border: 1px solid rgb(160, 137, 137);
+    border: 0px solid rgb(160, 137, 137);
     outline: none;
     cursor: pointer;
+}
+.navegador_superior .meu_botao_postar{
+    margin-left: 85%;
+    padding: 10px 20px;
+    border: 0px solid rgb(160, 137, 137);
+    outline: none;
+    cursor: pointer;
+}
+.navegador_superior .meu_botao_postar:hover{
+    background-color: rgba(153, 205, 50, 0.753);
+}
+.navegador_superior .meu_botao:hover{
+    background-color: rgba(153, 205, 50, 0.753);
+}
+.navegador_superior .menu_retratil_esquerdo.active{
+    height: 100vh;
+    top: 40px;
+    /*height: calc(100vh - 40px);*/
+}
+.navegador_superior .menu_retratil_esquerdo{
+    background-color: rgba(0, 128, 128, 0.479);
+    height: 0;
+    width: 400px;
+    position: fixed;
+    transition: height 2700ms;
+    top: 40px;
+}
+.container .conteudo .imagem.active{
+    left: 400px;
+    position: relative;
 }
