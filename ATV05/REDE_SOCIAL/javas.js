@@ -9,7 +9,7 @@ meu_botao.addEventListener("click", function(){
     menu.classList.toggle("active")
 })
 
-let conteudo = document.querySelector(".container .conteudo img")
+let conteudo = document.querySelector(".container .conteudo")
 console.log(conteudo)
 
 meu_botao.addEventListener("click", function(){
