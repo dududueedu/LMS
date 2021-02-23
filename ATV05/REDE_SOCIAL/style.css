@@ -8,7 +8,7 @@ body{
 .navegador_superior{
     height: 40px;
     width: 100vw;
-    background-color: rgba(153, 205, 50, 0.753);
+    background-color: rgba(201, 87, 87, 0.753);
     display: flex;
 }
 .navegador_superior .minha_logo{
@@ -29,10 +29,10 @@ body{
     cursor: pointer;
 }
 .navegador_superior .meu_botao_postar:hover{
-    background-color: rgba(153, 205, 50, 0.753);
+    background-color: rgba(201, 87, 87, 0.753);
 }
 .navegador_superior .meu_botao:hover{
-    background-color: rgba(153, 205, 50, 0.753);
+    background-color: rgba(201, 87, 87, 0.753);
 }
 .menu_retratil_esquerdo.active{
     height: 100vh;
@@ -41,7 +41,7 @@ body{
     /*height: calc(100vh - 40px);*/
 }
 .menu_retratil_esquerdo{
-    background-color: rgb(0, 128, 128);
+    background-color: rgb(0, 2, 128);
     height: 0;
     width: 400px;
     position: fixed;
@@ -55,7 +55,7 @@ body{
 
 /*Feed e posts*/
 .container .conteudo {
-    background-color: rgba(160, 137, 137, 0.61);
+    background-color: rgba(145, 238, 168, 0.61);
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -68,10 +68,106 @@ body{
 }
 
 .container .conteudo .post{
-    background-color: rgb(153, 205, 50);
+    background-color: rgb(0, 2, 128);
     margin-left: 40px;
     margin-right: 40px;
     margin-top: 10px;
     height: 30px;
     padding: 5px;
+    color: whitesmoke;
+}
+
+/*OVERLAY*/
+.overlay_modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8, 4, 4, 0.5);
+    top: 0;
+    left: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+
+    animation-name: aparecer;
+    animation-duration: 800ms;
+}
+.overlay_modal.active{
+    display: flex;
+}
+.overlay_modal .container_modal{
+    background-color: white;
+    width: 500px;
+    height: 256px;
+    border-radius: 5px;
+    position: relative;
+
+    animation: cair 600ms;
+}
+
+.overlay_modal .container_modal .header_modal{
+    display: flex;
+    padding: 0px 15px;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+}
+.overlay_modal .container_modal .header_modal .botaoX{
+    margin-left: auto;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.overlay_modal .container_modal .content_modal{
+    padding: 5px 10px;
+}
+.overlay_modal .container_modal .footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 0.205);
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.overlay_modal .container_modal .footer .botao_modal{
+    padding: 10px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+
+}
+
+.overlay_modal .container_modal .footer .botao_modal.botao_close{
+    background-color: #545b62;
+}
+.overlay_modal .container_modal .footer .botao_modal.botao_blue{
+    background-color: #0062cc;
+}
+/*animação modal*/
+@keyframes aparecer{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes cair{
+    from{
+        transform: translate(0px, -500px);
+    }
+    to{
+        transform: translate(100px, 70px);
+    }
 }
