@@ -34,12 +34,13 @@ body{
 .navegador_superior .meu_botao:hover{
     background-color: rgba(153, 205, 50, 0.753);
 }
-.navegador_superior .menu_retratil_esquerdo.active{
+.menu_retratil_esquerdo.active{
     height: 100vh;
     top: 40px;
+    display: flex;
     /*height: calc(100vh - 40px);*/
 }
-.navegador_superior .menu_retratil_esquerdo{
+.menu_retratil_esquerdo{
     background-color: rgb(0, 128, 128);
     height: 0;
     width: 400px;
