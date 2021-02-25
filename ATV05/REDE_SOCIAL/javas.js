@@ -6,8 +6,12 @@ console.log(meu_botao)
 let menu = document.querySelector(".menu_retratil_esquerdo")
 console.log(menu)
 
+let links = document.querySelector(".menu_retratil_esquerdo .link")
+console.log(links)
+
 meu_botao.addEventListener("click", function(){
     menu.classList.toggle("active")
+    links.classList.toggle("active")
 })
 
 let conteudo = document.querySelector(".container .conteudo")
@@ -19,7 +23,6 @@ meu_botao.addEventListener("click", function(){
 //botao postar
 let botaopostar = document.querySelector(".navegador_superior .meu_botao_postar")
 console.log(botaopostar)
-
 //OVERLAY com o botao postar
 let overlayModal = document.querySelector(".overlay_modal")
 
@@ -41,3 +44,94 @@ botaoX.addEventListener("click", function(){
 window.addEventListener("click", function(event){
     if(event.target == overlayModal) overlayModal.classList.remove("active")
 })
+
+//formulario
+let form_nome = document.querySelector(".form_nome")
+let form_msg = document.querySelector(".form_msg")
+let botao_sumit = document.querySelector(".botao_submit") 
+
+let conteudo_mural = document.querySelector(".conteudo")
+
+botao_sumit.addEventListener("click", function(){
+    let posts = document.querySelector(".container .conteudo .post.active")
+    posts.classList.remove("active")
+})
+
+botao_sumit.addEventListener("click", function(event){
+
+    event.preventDefault()
+
+    let nome = form_nome.value
+    let msg = form_msg.value
+
+    let post = document.createElement("div")
+    post.classList.add("post")
+    conteudo_mural.appendChild(post)
+
+    let h3 = document.createElement("h3")
+    h3.classList.add("nome_card")
+    let texto_h3 = document.createTextNode(nome)
+    h3.appendChild(texto_h3)
+    post.appendChild(h3)
+
+    let p = document.createElement("p")
+    p.classList.add("msg_card")
+    let mensagem = document.createTextNode(msg)
+    p.appendChild(mensagem)
+    post.appendChild(p)
+
+    overlayModal.classList.remove("active")
+    post.classList.add("active")
+
+})
+//destaque para o primeiro post
+let posts_data = [
+    {
+        nome: "Eduardo",
+        mensagem: "E aí, tranquilo!",
+    },
+    {
+        nome: "Liro",
+        mensagem: "Oi gente!",
+    },
+    {
+        nome: "Safira",
+        mensagem: "Como vai?",
+    },
+    {
+        nome: "Nicolau",
+        mensagem: "Boa noite seus lindos(as)!",
+    }
+]
+
+let count = 0
+let posts = document.querySelector(".conteudo")
+
+for (let i = 0; i < posts_data.length; i++) {
+    let post = document.createElement("div")
+    post.classList.add("post")
+    posts.appendChild(post)
+
+    let h3 = document.createElement("h3")
+    h3.classList.add("nome_card")
+
+    let p = document.createElement("p")
+    p.classList.add("msg_card")
+
+    posts_data.map((post) => {
+        h3.innerHTML = posts_data[i].nome
+        p.innerHTML = posts_data[i].mensagem
+    })
+    post.appendChild(h3)
+    post.appendChild(p)
+
+    count++
+
+    if (count == 4) {
+        post.classList.add("active")
+
+        function mudarText(){ p.innerHTML = posts_data[i--].mensagem }
+        
+    }
+    post = setInterval(mudarText, 2000)
+}

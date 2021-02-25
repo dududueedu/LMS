@@ -47,18 +47,39 @@ body{
     position: fixed;
     transition: height 2700ms;
     top: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.menu_retratil_esquerdo .link{
+    display: none;
+}
+.menu_retratil_esquerdo .link.active{
+    display: block;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 10px;
+    text-align: justify;
+}
+.menu_retratil_esquerdo .link.active:hover{
+    background-color: hsl(0, 0%, 0%);
+    height: 20px;
+    border: aliceblue 1px solid;
 }
 .container .conteudo .imagem.active{
     left: 400px;
-    position: relative;
 }
-
+.container{
+    display: block;
+}
 /*Feed e posts*/
 .container .conteudo {
     background-color: rgba(145, 238, 168, 0.61);
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .container .conteudo.active{
@@ -71,10 +92,18 @@ body{
     background-color: rgb(0, 2, 128);
     margin-left: 40px;
     margin-right: 40px;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     height: 30px;
-    padding: 5px;
+    padding: 10px;
     color: whitesmoke;
+    border-radius: 5px;
+    user-select: none;
+}
+.container .conteudo .post.active{
+    border: green 5px solid;
+    background-color: greenyellow;
+    color: black;
 }
 
 /*OVERLAY*/
@@ -147,12 +176,12 @@ body{
     cursor: pointer;
 
 }
-
 .overlay_modal .container_modal .footer .botao_modal.botao_close{
     background-color: #545b62;
 }
 .overlay_modal .container_modal .footer .botao_modal.botao_blue{
     background-color: #0062cc;
+    display: none;
 }
 /*animação modal*/
 @keyframes aparecer{
@@ -170,4 +199,20 @@ body{
     to{
         transform: translate(100px, 70px);
     }
+}
+
+.overlay_modal .container_modal .content_modal .form_modal{
+    display: flex;
+    flex-direction: column;
+}
+.overlay_modal .container_modal .content_modal .form_modal .botao_submit{
+    border-radius: 3px;
+    padding: 10px;
+    width: 100px;
+    margin-top: 10px;
+    transform: translate(380%, 0);
+    background-color: #0062cc;
+    color: white;
+    border: none;
+    cursor: pointer;
 }

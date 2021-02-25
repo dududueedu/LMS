@@ -14,22 +14,18 @@
 
             <button class="meu_botao_postar"> POSTAR </button>
             <button class="meu_botao"> &#9776; </button>
-
         </nav>
 
-        <div class="menu_retratil_esquerdo"></div>
+        <div class="menu_retratil_esquerdo">
+            <a href="" class="link"> MEU LINK </a>
+        </div>
 
-        <article class="conteudo">
-            <div class="post">  <p> nome: </p>  
-                msg: </div>
-            <div class="post">  <p> nome: </p>  
-                msg: </div>
-            <div class="post">  <p> nome: </p>  
-                msg: </div>
-            <div class="post">  <p> nome: </p>  
-                msg: </div>
-            <!--<img class="imagem" src="https://loremflickr.com/450/450/dog" alt="">-->
-        </article>
+        <div class="conteudo">
+            <div class="post">
+                <h3 class="nome_card"> Jô </h3>
+                <p class="msg_card"> Iai mano!? </p>
+            </div>
+        </div>
 
         <div class="overlay_modal">
             <div class="container_modal">
@@ -38,9 +34,11 @@
                     <button class="botaoX"> x </button>
                 </div>
                 <div class="content_modal">
-                    <p>"A persistência é o caminho do êxito."
-                        <br>
-                        - Charles Chaplin</p>
+                    <form class="form_modal" action="">
+                        Nome: <input class="form_nome" type="text">
+                        Mensagem: <input class="form_msg" type="text">
+                        <input class="botao_submit" type="submit" value="Submeter">
+                    </form>
                 </div>
                 <div class="footer">
                     <button class="botao_modal botao_close"> Close </button>
