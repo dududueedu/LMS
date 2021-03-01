@@ -131,7 +131,6 @@ for (let i = 0; i < posts_data.length; i++) {
         post.classList.add("active")
 
         function mudarText(){ p.innerHTML = posts_data[i--].mensagem }
-        
+        post = setInterval(mudarText, 2000)
     }
-    post = setInterval(mudarText, 2000)
 }
