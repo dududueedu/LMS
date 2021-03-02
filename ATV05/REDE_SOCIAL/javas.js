@@ -104,7 +104,6 @@ let posts_data = [
     }
 ]
 
-let count = 0
 let posts = document.querySelector(".conteudo")
 
 for (let i = 0; i < posts_data.length; i++) {
@@ -125,12 +124,20 @@ for (let i = 0; i < posts_data.length; i++) {
     post.appendChild(h3)
     post.appendChild(p)
 
-    count++
-
-    if (count == 4) {
+    if(i == 3){
         post.classList.add("active")
-
-        function mudarText(){ p.innerHTML = posts_data[i--].mensagem }
-        post = setInterval(mudarText, 2000)
     }
 }
+
+let h3 = document.querySelector(".container .conteudo .post.active .nome_card")
+let pp = document.querySelector(".container .conteudo .post.active .msg_card")
+let trocarpost = -1
+
+function mudarText(){ 
+    if(trocarpost >= posts_data.length) trocarpost = -1
+    trocarpost++
+    h3.innerHTML = posts_data[trocarpost].nome
+    pp.innerHTML = posts_data[trocarpost].mensagem
+}
+
+post = setInterval(mudarText, 2000)

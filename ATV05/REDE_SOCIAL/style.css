@@ -34,25 +34,25 @@ body{
 .navegador_superior .meu_botao:hover{
     background-color: rgba(201, 87, 87, 0.753);
 }
-.menu_retratil_esquerdo.active{
-    height: 100vh;
-    top: 40px;
-    display: flex;
-    width: 400px;
-    /*height: calc(100vh - 40px);*/
-    animation-name: menulateralesquerdo;
-    animation-duration: 800000ms;
-}
+
 .menu_retratil_esquerdo{
     background-color: rgb(0, 2, 128);
-    height: 0;
+    height: calc(100vh - 40px);
     width: 0;
     position: fixed;
     transition: width 2700ms;
     top: 40px;
+    display: flex;
     justify-content: center;
     align-items: center;
+
 }
+.menu_retratil_esquerdo.active{
+    /*height: 100vh;*/
+    top: 40px;
+    width: 400px;
+}
+
 .menu_retratil_esquerdo .link{
     display: none;
 }
@@ -83,11 +83,14 @@ body{
     overflow: hidden;
     display: flex;
     flex-direction: column-reverse;
+
+    position: relative;
+    left: 0;
+    transition: width 2700ms, left 2700ms;
 }
 
 .container .conteudo.active{
     left: 400px;
-    position: relative;
     width: calc(100vw - 400px);
 }
 
