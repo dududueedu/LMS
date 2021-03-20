@@ -13,12 +13,11 @@
     background-color: blanchedalmond;
 }
 .container .pagina .group-list{
-    left: 0;
     background-color: #0d6efd;
     width: 300px;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 .form_modal .botao_submit{
     border-radius: 3px;
@@ -31,10 +30,17 @@
     cursor: pointer;
 }
 .container .pagina .group-list .header_nome{
-    color: white;
-    background-color: #76a0df;
-    position: absolute;
+    background-color: #b7df76;
     width: 300px;
     display: flex;
     justify-content: center;
+}
+.container .pagina .group-list .lista{
+    background-color: #b7df76;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+.container .pagina .group-list .lista:hover{
+    background-color: #0d6efd;
 }
