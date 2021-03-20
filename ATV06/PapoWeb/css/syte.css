@@ -14,17 +14,27 @@
 }
 .container .pagina .group-list{
     left: 0;
-    background-color: #4c8dc5;
+    background-color: #0d6efd;
     width: 300px;
     height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 .form_modal .botao_submit{
     border-radius: 3px;
     padding: 6px;
     width: 100px;
     margin-top: 10px;
-    background-color: #0b5ed7;
+    background-color: #0d6efd;
     color: white;
     border: none;
     cursor: pointer;
+}
+.container .pagina .group-list .header_nome{
+    color: white;
+    background-color: #76a0df;
+    position: absolute;
+    width: 300px;
+    display: flex;
+    justify-content: center;
 }
