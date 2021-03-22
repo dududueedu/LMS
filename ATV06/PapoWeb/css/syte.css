@@ -34,12 +34,15 @@
     width: 300px;
     display: flex;
     justify-content: center;
+    user-select: none;
 }
 .container .pagina .group-list .lista{
     background-color: #b7df76;
     width: 300px;
     display: flex;
     justify-content: center;
+    cursor: pointer;
+    user-select: none;
 }
 .container .pagina .group-list .lista:hover{
     background-color: #0d6efd;
