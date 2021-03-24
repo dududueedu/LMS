@@ -11,3 +11,4 @@ HEAD – Variação do GET em que o recurso não é retornado:
 
 let myModal = new bootstrap.Modal(document.getElementById('exampleModal'))
 myModal.show()
+
