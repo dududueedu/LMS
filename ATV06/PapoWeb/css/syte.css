@@ -11,6 +11,7 @@
     width: 900px;
     height: 100vh;
     background-color: blanchedalmond;
+    position: fixed;
 }
 .container .pagina .group-list{
     background-color: #0d6efd;
@@ -18,6 +19,24 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+.container .pagina .group-list .new-group{
+    display: flex;
+    margin-top: 170%;
+}
+.container .pagina .group-list .new-group .botao_submit{
+    width: 80px;
+    padding: 6px;
+    border-radius: 3px;
+    background-color: #b7df76;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.container .pagina .group-list .new-group .form-control{
+    width: 200px;
+    margin-left: 10px;
 }
 .form_modal .botao_submit{
     border-radius: 3px;
@@ -29,14 +48,17 @@
     border: none;
     cursor: pointer;
 }
-.container .pagina .group-list .header_nome{
-    background-color: #b7df76;
-    width: 300px;
+.container .pagina .header_nome{
+    background-color: #0d6efd;
+    color: white;
+    width: 900px;
     display: flex;
-    justify-content: center;
     user-select: none;
 }
-.container .pagina .group-list .lista{
+.container .pagina .header_nome h4{
+    padding-left: 30px;
+}
+.container .pagina .group-list .grupo{
     background-color: #b7df76;
     width: 300px;
     display: flex;
@@ -44,6 +66,7 @@
     cursor: pointer;
     user-select: none;
 }
-.container .pagina .group-list .lista:hover{
+.container .pagina .group-list .grupo:hover{
     background-color: #0d6efd;
+    color: white;
 }
