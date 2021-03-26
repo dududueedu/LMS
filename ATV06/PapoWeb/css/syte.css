@@ -23,7 +23,8 @@
 }
 .container .pagina .group-list .new-group{
     display: flex;
-    margin-top: 169%;
+    position: absolute;
+    top: 87%;
 }
 .botao_submit{
     width: 80px;
@@ -38,7 +39,7 @@
     width: 200px;
     margin-left: 10px;
 }
-.form_modal .botao_submit{
+#form_modal .botao_submit{
     border-radius: 3px;
     padding: 6px;
     width: 100px;
@@ -54,22 +55,24 @@
     width: 900px;
     display: flex;
     user-select: none;
-    align-items: center;
+    overflow: hidden;
 }
 .container .pagina .header_nome h4{
     padding-left: 30px;
 }
-.container .pagina .header_nome .float-direita{
-    left: 690px;
+.container .pagina .header_nome #navbarText.navbar-collapse{
+    left: 600px;
     position: relative;
-    width: 68px;
     background-color: #b7df76;
     padding: 4px;
+    width: 60px;
     color: black;
 }
+
 .container .pagina .group-list .grupo{
     background-color: #b7df76;
     width: 300px;
+    height: 40px;
     display: flex;
     justify-content: center;
     cursor: pointer;
