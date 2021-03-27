@@ -20,8 +20,9 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    
 }
-.container .pagina .group-list .new-group{
+.container .pagina .group-list #new-group{
     display: flex;
     position: absolute;
     top: 87%;
@@ -35,7 +36,7 @@
     cursor: pointer;
     outline: none;
 }
-.container .pagina .group-list .new-group .form-control{
+.container .pagina .group-list #new-group .form-control{
     width: 200px;
     margin-left: 10px;
 }
@@ -59,6 +60,8 @@
 }
 .container .pagina .header_nome h4{
     padding-left: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic, oblique;
 }
 .container .pagina .header_nome #navbarText.navbar-collapse{
     left: 600px;
