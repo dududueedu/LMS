@@ -14,14 +14,31 @@ let myModal = new bootstrap.Modal(document.getElementById('exampleModal'))
 myModal.show()
 
 let pag = document.querySelector(".container .pagina")
+let globalIdGrupo = ""
+
 //estrutura da lista de grupos
-function listarGrupos(nome) {
+function listarGrupos(id, nome) {
     group_list = document.querySelector(".group-list");
 
     let grupo = document.createElement("div");
     grupo.classList.add("grupo");
-    grupo.textContent = nome;
 
+    let img = document.createElement("img");
+    img.classList.add("imagem");
+    img.src = "https://cdn.pixabay.com/photo/2016/11/14/17/39/person-1824147_960_720.png";
+
+    let nome_gp = document.createElement("div");
+    nome_gp.classList.add("nome_gp");
+    nome_gp.textContent = nome;
+
+    //pega o id do grupo clicado
+    grupo.addEventListener("click", ()=> {
+        console.log(id);
+        globalIdGrupo = id;
+    })
+
+    grupo.appendChild(img);
+    grupo.appendChild(nome_gp);
     group_list.appendChild(grupo);
     return group_list;
 }
@@ -34,7 +51,7 @@ function GETGroups() {
         (response) => {
             let grupos = response.data;
             for (let group of grupos) {
-                let createGroup = listarGrupos(group.nome);
+                let createGroup = listarGrupos(group.id, group.nome);
                 pag.appendChild(createGroup);
                 console.log(group.nome);
             }
@@ -45,12 +62,11 @@ function GETGroups() {
         }
     )
 }
-GETGroups();
+GETGroups()
 
 //criar grupos
 let form_group = document.querySelector("#new-group");
 let input_form = document.querySelector("#new-group #grupo");
-console.log(form_group)
 
 form_group.addEventListener("submit", (e)=> {
     e.preventDefault();
@@ -62,14 +78,13 @@ form_group.addEventListener("submit", (e)=> {
         }
     }).then((response) => {
         GETGroups();
-    }).catch((error) => {
-        console.log(error);
+    }).catch((err) => {
+        console.log(err);
     })
 })
 
-//nome do usuário
+//inserir nome do usuário no canto direito
 let navbarnome = document.querySelector(".pagina .header_nome #navbarText.navbar-collapse");
-console.log(navbarnome)
 
 globalName = ""
 let form = document.getElementById('form_modal');
@@ -84,6 +99,27 @@ form.addEventListener('submit', (e)=>{
 
     console.log(span);
     navbarnome.appendChild(span);
-        
-    myModal.hide()
+    
+    myModal.hide();
 });
+   
+//adicionar mensagem em um grupo (ok)
+let form_conversa = document.getElementById("new-mensagem")
+let input_conversa = document.querySelector(".new-mensagem .form-control")
+
+form_conversa.addEventListener("submit", (e)=> {
+    e.preventDefault();
+    axios({
+        method: "POST",
+        url: "https://server-json-lms.herokuapp.com/mensagens",
+        data: {
+            nome: globalName,
+            corpo: input_conversa.value,
+            grupoId: globalIdGrupo
+        }
+    }).then((response) => {
+        console.log("deu certo!");
+    }).catch((err) => {
+        console.log(err);
+    })
+})
