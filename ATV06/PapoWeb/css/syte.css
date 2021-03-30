@@ -86,13 +86,18 @@
     color: white;
 }
 .container .pagina .mensagens{
-    left: 300px;
-    position: absolute;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+}
+.container .pagina .mensagens .corpoDaMsg{
+    left: 450px;
+    position: relative;
     top: 35px;
     padding: 15px;
-    background-color: #0d6efd;
-    border-radius: 29px 29px 100px 29px;
-    color: white;
+    background-color: #b7df76;
+    border-radius: 29px 29px 29px 29px;
+    color: rgb(0, 0, 0);
     margin: 8px;
 }
 .container .pagina #new-mensagem{

@@ -35,6 +35,7 @@ function listarGrupos(id, nome) {
     grupo.addEventListener("click", ()=> {
         console.log(id);
         globalIdGrupo = id;
+        GETmensagens(globalIdGrupo);
     })
 
     grupo.appendChild(img);
@@ -42,7 +43,7 @@ function listarGrupos(id, nome) {
     group_list.appendChild(grupo);
     return group_list;
 }
-
+let resetarGrupos = document.querySelector(".container .pagina .group-list .grupo")
 function GETGroups() {
     axios({
         method: 'GET',
@@ -123,3 +124,38 @@ form_conversa.addEventListener("submit", (e)=> {
         console.log(err);
     })
 })
+
+//requisitar mensagens por meio de um grupo (ID)
+let mensagens = document.querySelector(".pagina .mensagens");
+function GETmensagens(grupoIdGrupo){
+    mensagens.innerHTML = ""
+    axios({
+        method: "GET",
+        url: 'https://server-json-lms.herokuapp.com/grupos/' + grupoIdGrupo + '/mensagens'   
+    }).then((response) => {
+        let msgs = response.data;
+        listarMensagens(msgs);
+    }).catch((err)=>{
+        console.log(err);
+    })
+}
+
+function listarMensagens(msgs){
+    for(let mensage of msgs){
+        let corpoDaMsg = document.createElement("div");
+        corpoDaMsg.classList.add("corpoDaMsg");
+
+        let nome = document.createElement("h6");
+        nome.classList.add("nome");
+        nome.textContent = mensage.nome;
+
+        let mensagem = document.createElement("span");
+        mensagem.classList.add("msg");
+        mensagem.textContent = mensage.corpo;
+
+        corpoDaMsg.appendChild(nome);
+        corpoDaMsg.appendChild(mensagem);
+
+        mensagens.appendChild(corpoDaMsg);
+    }
+}
