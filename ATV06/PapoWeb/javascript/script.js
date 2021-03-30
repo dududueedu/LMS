@@ -43,7 +43,7 @@ function listarGrupos(id, nome) {
     group_list.appendChild(grupo);
     return group_list;
 }
-let resetarGrupos = document.querySelector(".container .pagina .group-list .grupo")
+
 function GETGroups() {
     axios({
         method: 'GET',
@@ -63,7 +63,7 @@ function GETGroups() {
         }
     )
 }
-GETGroups()
+
 
 //criar grupos
 let form_group = document.querySelector("#new-group");
@@ -102,6 +102,7 @@ form.addEventListener('submit', (e)=>{
     navbarnome.appendChild(span);
     
     myModal.hide();
+    GETGroups();
 });
    
 //adicionar mensagem em um grupo (ok)
@@ -119,6 +120,7 @@ form_conversa.addEventListener("submit", (e)=> {
             grupoId: globalIdGrupo
         }
     }).then((response) => {
+        GETmensagens(globalIdGrupo);
         console.log("deu certo!");
     }).catch((err) => {
         console.log(err);

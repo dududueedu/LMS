@@ -96,9 +96,10 @@
     top: 35px;
     padding: 15px;
     background-color: #b7df76;
-    border-radius: 29px 29px 29px 29px;
+    border-radius: 29px;
     color: rgb(0, 0, 0);
     margin: 8px;
+    border: solid black 2px;
 }
 .container .pagina #new-mensagem{
     left: 300px;
