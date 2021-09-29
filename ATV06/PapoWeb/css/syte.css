@@ -12,8 +12,9 @@
     height: 100vh;
     background-color: blanchedalmond;
     position: fixed;
+    overflow: hidden;
 }
-.container .pagina .group-list{
+.container .pagina .grupos-list{
     background-color: #0d6efd;
     width: 300px;
     height: 100vh;
@@ -21,10 +22,12 @@
     flex-direction: column;
     position: relative;
 }
-.container .pagina .group-list #new-group{
+.container .pagina .grupos-list #new-group{
     display: flex;
     position: absolute;
-    top: 87%;
+    top: 85%;
+    background-color: blanchedalmond;
+    padding: 13px;
 }
 .botao_submit{
     width: 80px;
@@ -35,9 +38,9 @@
     cursor: pointer;
     outline: none;
 }
-.container .pagina .group-list #new-group .form-control{
-    width: 200px;
-    margin-left: 10px;
+.container .pagina .grupos-list #new-group .form-control{
+    width: 190px;
+    margin-right: 5px;
 }
 #form_modal .botao_submit{
     border-radius: 3px;
@@ -51,19 +54,22 @@
 }
 .container .pagina .header_nome{
     background-color: #0d6efd;
-    color: white;
     width: 900px;
     display: flex;
     user-select: none;
-    overflow: hidden;
 }
-.container .pagina .header_nome h4{
-    padding-left: 30px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic, oblique;
+.container .pagina .header_nome .nomesite{
+    padding: 6px;
+    padding-left: 36px;
+    padding-right: 36px;
+    background-color: #b7df76;
+    font-style: italic;
+    position: relative;
+    display: flex;
+    border-radius: 0 20px 20px 0;
 }
 .container .pagina .header_nome #navbarText.navbar-collapse{
-    left: 600px;
+    left: 500px;
     position: relative;
     background-color: #b7df76;
     padding: 4px;
@@ -71,7 +77,7 @@
     color: black;
 }
 
-.container .pagina .group-list .grupo{
+.container .pagina .grupos-list .group-list .grupo{
     background-color: #b7df76;
     width: 300px;
     height: 40px;
@@ -81,19 +87,23 @@
     cursor: pointer;
     user-select: none;
 }
-.container .pagina .group-list .grupo:hover{
+.container .pagina .grupos-list .group-list .grupo:hover{
     background-color: #0d6efd;
     color: white;
 }
 .container .pagina .mensagens{
+    top: 36px;
     display: flex;
     position: fixed;
     flex-direction: column;
+    margin-left: 300px;
+    width: 600px;
+    height: 85%;
+    overflow: scroll;
 }
 .container .pagina .mensagens .corpoDaMsg{
-    left: 450px;
     position: relative;
-    top: 35px;
+    top: 5px;
     padding: 15px;
     background-color: #b7df76;
     border-radius: 29px;
@@ -114,7 +124,7 @@
 .container .pagina #new-mensagem .botao_submit{
     margin-left: 5px;
 }
-.container .pagina .group-list .grupo .imagem{
+.container .pagina .grupos-list .group-list .grupo .imagem{
     width: 20px;
     height: 20px;
     position: relative;
